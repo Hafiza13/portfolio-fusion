@@ -94,3 +94,45 @@ if (window.location.pathname.includes("rps.html")) {
   });
 }
 
+// ------------------------------
+// Flatland Activity JavaScript
+// ------------------------------
+
+let words, square;
+
+function greeting() {
+    if (words) {
+        words.innerHTML = "Welcome to Flatland.<br>I am Square.";
+    }
+}
+
+function changeColour(colour) {
+    if (square) {
+        square.style.backgroundColor = colour;
+    }
+}
+
+function createBuzzwordPhrase() {
+    const buzz = ["Paradigm-changing", "Multi-tier", "10,000-foot", "Agile", "Customer", "Win-win"];
+    const action = ["empowered", "value-added", "synergy", "creative", "oriented", "focused", "aligned"];
+    const outcome = ["process", "deliverable", "solution", "tipping-point", "strategy", "vision"];
+
+    return `${buzz[Math.floor(Math.random() * buzz.length)]} ${action[Math.floor(Math.random() * action.length)]} ${outcome[Math.floor(Math.random() * outcome.length)]}`;
+}
+
+window.onload = () => {
+    words = document.getElementById("words");
+    square = document.getElementById("square");
+
+    if (words && square) {
+        greeting();
+
+        square.addEventListener("click", () => {
+            words.innerHTML = createBuzzwordPhrase();
+            changeColour("green");
+        });
+
+        square.addEventListener("mouseover", () => changeColour("red"));
+        square.addEventListener("mouseout", () => changeColour("gray"));
+    }
+};

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 6</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function changeColour(colour) {
+            square.style.backgroundColor = colour;
+        }
+
+        function greeting() {
+            words.innerHTML = "Welcome to Flatland.<br>I am Square.";
+        }
+
+        window.onload = function () {
+            words = document.getElementById("words");
+            square = document.getElementById("square");
+
+            greeting();
+
+            square.addEventListener("click", () => changeColour("green"));
+            square.addEventListener("mouseover", () => changeColour("red"));
+            square.addEventListener("mouseout", () => changeColour("gray"));
+        };
+    </script>
+</head>
+<body>
+    <div id="words"></div>
+    <div id="square"></div>
+</body>
+</html>

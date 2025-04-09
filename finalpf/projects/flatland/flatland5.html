@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 5</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function changeColour(colour) {
+            square.style.backgroundColor = colour;
+        }
+
+        window.onload = function () {
+            square = document.getElementById("square");
+            square.addEventListener("click", () => changeColour("green"));
+            square.addEventListener("mouseover", () => changeColour("red"));
+            square.addEventListener("mouseout", () => changeColour("gray"));
+        };
+    </script>
+</head>
+<body>
+    <div id="words"></div>
+    <div id="square"></div>
+</body>
+</html>

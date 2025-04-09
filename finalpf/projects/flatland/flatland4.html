@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 4</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function changeColour(colour) {
+            document.getElementById("square").style.backgroundColor = colour;
+        }
+    </script>
+</head>
+<body>
+    <div id="words"></div>
+    <div id="square"
+         onclick="changeColour('green')"
+         onmouseover="changeColour('red')"
+         onmouseout="changeColour('gray')">
+    </div>
+</body>
+</html>

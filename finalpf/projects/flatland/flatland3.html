@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 3</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function makeGreen() {
+            document.getElementById("square").style.backgroundColor = "green";
+        }
+        function makeRed() {
+            document.getElementById("square").style.backgroundColor = "red";
+        }
+        function makeGray() {
+            document.getElementById("square").style.backgroundColor = "gray";
+        }
+    </script>
+</head>
+<body>
+    <div id="words"></div>
+    <div id="square"
+         onclick="makeGreen()"
+         onmouseover="makeRed()"
+         onmouseout="makeGray()">
+    </div>
+</body>
+</html>

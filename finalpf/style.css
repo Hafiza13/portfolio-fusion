@@ -172,3 +172,63 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* WEEK 2 – Music & Italy Theme */
+/* WEEK 2 – Italy & Music */
+.week2 {
+    background-image: url('images/opera.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+  }
+  
+  .week2-content {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+  }
+  
+  .week2-content h2,
+  .week2-content h3 {
+    color: #4a4e69;
+    margin-top: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .week2-content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .week2-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .week2-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  
+  .week2-logo {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional: Navigation hover fix */
+  nav a[aria-current="page"] {
+    border-bottom: 2px solid #f2e9e4;
+  }
+  

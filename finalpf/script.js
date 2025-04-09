@@ -136,3 +136,61 @@ window.onload = () => {
         square.addEventListener("mouseout", () => changeColour("gray"));
     }
 };
+
+
+// === RSS FEED LOGIC ===
+
+function loadFeed(feedUrl) {
+  const contentDiv = document.getElementById('content');
+  const feedTitle = document.getElementById('feed-title');
+
+  contentDiv.innerHTML = '<p>Loading feed...</p>';
+
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl))
+    .then(response => response.json())
+    .then(data => {
+      feedTitle.textContent = 'Feed: ' + data.feed.title;
+      displayArticles(data.items);
+    })
+    .catch(error => {
+      console.error('Feed error:', error);
+      contentDiv.innerHTML = '<p style="color:red;">Unable to load the feed. Try again later.</p>';
+    });
+}
+
+function displayArticles(articles) {
+  const contentDiv = document.getElementById('content');
+  contentDiv.innerHTML = '';
+
+  articles.forEach(article => {
+    const el = document.createElement('article');
+    const date = new Date(article.pubDate).toLocaleDateString();
+
+    el.innerHTML = `
+      <div class="icon">📰</div>
+      <div>
+        <h3>${article.title}</h3>
+        <p>${article.description}</p>
+        <small>📅 ${date}</small>
+      </div>
+    `;
+    contentDiv.appendChild(el);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById('feed-selector');
+  const themeBtn = document.getElementById('theme-toggle');
+
+  if (selector) {
+    selector.addEventListener('change', () => loadFeed(selector.value));
+    loadFeed(selector.value);
+  }
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('light-theme');
+    });
+  }
+});

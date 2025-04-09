@@ -324,3 +324,106 @@ body.flatland {
     margin-top: 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
+
+
+/* === RSS Reader Styles === */
+
+body.light-theme {
+    background-color: #f9f9fc;
+    color: #222;
+  }
+  
+  body.dark-theme {
+    background-color: #1e1e2e;
+    color: #eee;
+  }
+  
+  .rss-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .dark-theme .rss-container {
+    background-color: #2e2e3a;
+  }
+  
+  .rss-container h1 {
+    font-size: 2em;
+    color: #2b2e4a;
+    margin-bottom: 20px;
+  }
+  
+  .dark-theme .rss-container h1 {
+    color: #eee;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #feed-selector,
+  #theme-toggle {
+    padding: 8px;
+    font-size: 1em;
+  }
+  
+  .rss-feed article {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 0;
+    animation: fadeIn 0.6s ease;
+  }
+  
+  article h3 {
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  article p {
+    margin: 4px 0 0;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  article .icon {
+    font-size: 1.6em;
+  }
+  
+  #feed-title {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #444;
+  }
+  
+  .dark-theme #feed-title {
+    color: #ddd;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

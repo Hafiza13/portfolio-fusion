@@ -21,6 +21,7 @@ The portfolio includes five weekly challenges, each demonstrating a different sk
 ## 🔗 Live Site
 
 View the deployed portfolio on Netlify:  
-👉 
+👉 [https://aiassistedportfoliofusion.netlify.app](https://aiassistedportfoliofusion.netlify.app)
+
 
 
